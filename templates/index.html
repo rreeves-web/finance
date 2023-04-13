@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Value</th>
+                <th>Cash Balance</th>
+                <th>Total Value</th>
+                <th>Total Funds</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- return render_template("index.html", stocks=companies, shares=shares, prices=prices, holdings=holdingsValues, cash=cash, total=grandTotal) -->
+            {% for result in results %}
+                <tr>
+                    <td>{{ result.symbol }}</td>
+                    <td>{{ result.shares }}</td>
+                    <td>{{ result.price }}</td>
+                    <td>{{ result.value }}</td>
+            {% endfor %}
+                    <td>{{ context.cash }} </td>
+                    <td>{{ context.total_value }}</td>
+                    <td>{{ context.total_funds }}</td>
+                </tr>
+
+        </tbody>
+    </table>
+{% endblock %}

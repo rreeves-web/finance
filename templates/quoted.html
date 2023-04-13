@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Close</th>
+                    <th>Change</th>
+                    <th>Change Percent</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for companyName in info %}
+                    <tr>
+                        <td>{{ info[companyName] }}</td>
+                        <td>{{ info[close] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

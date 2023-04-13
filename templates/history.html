@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <!-- Data I need in the table: purchases and sales
+         Each row will display all the data for the purchase or sale
+         Including buy/sell label, stock's symbol, buy/sell price, # of shares, date & time of trans-->
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Purchased \ Sold</th>
+                <th>Price</th>
+                <th>Shares Purchased \ Sold</th>
+                <th>Date & Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data goes here-->
+        </tbody>
+    </table>
+{% endblock %}

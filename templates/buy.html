@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Company Symbol" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares to Purchase" type="number">
+        </div>
+        <div class="mb-3">
+        <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Tooltip on right" type="submit">Buy Shares</button>
+    </form>
+
+{% endblock %}
